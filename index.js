@@ -1,6 +1,21 @@
 
 document.getElementById("countButton").onclick = function() {
-    
+   
+
+    document.body.removeChild(document.getElementById("lettersDiv"));
+    document.body.removeChild(document.getElementById("wordsDiv"));
+
+     lettersDiv = document.createElement("div");
+     lettersDiv.setAttribute("id", "lettersDiv")
+     wordsDiv = document.createElement("div");
+     wordsDiv.setAttribute("id","wordsDiv");
+
+console.log(lettersDiv);
+
+console.log(wordsDiv);
+    document.body.appendChild(lettersDiv);
+    document.body.appendChild(wordsDiv);
+
     var typedText = document.getElementById("textInput").value;
 
     typedText = typedText.toLowerCase();
